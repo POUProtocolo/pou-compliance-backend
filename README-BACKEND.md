@@ -1,46 +1,42 @@
-# Backend Node para POU PROTOCOLO
+# pou-compliance-backend
 
-Este backend expõe as rotas:
+Backend service for **POU PROTOCOLO V24** designed to expose compliance-related routes and support **Chainalysis Oracle** integration in a structured and auditable way.
 
-- POST /api/compliance/chainalysis
-- POST /api/compliance/elliptic
-- POST /api/compliance/trm
-- GET /health
+## Overview
 
-## Uso local
-1. Entre na pasta backend-node
-2. Copie `.env.example` para `.env`
-3. Rode:
-   npm install
-   npm start
+This backend currently exposes the following routes:
 
-## Modos rápidos
-No arquivo .env você pode testar:
+- `POST /api/compliance/chainalysis`
+- `GET /health`
 
-COMPLIANCE_MODE=clear
-COMPLIANCE_MODE=blocked
-COMPLIANCE_MODE=unavailable
+Its purpose is to provide a standardized compliance interface for **POU PROTOCOLO V24**, using **Chainalysis Oracle** as the current screening reference.
 
-Ou definir por provedor:
-CHAINALYSIS_MODE=clear
-ELLIPTIC_MODE=clear
-TRM_MODE=blocked
+## Official Context
 
-## Produção
-Se você já tiver upstreams próprios, preencha:
-- CHAINALYSIS_UPSTREAM_URL
-- ELLIPTIC_UPSTREAM_URL
-- TRM_UPSTREAM_URL
+**POU PROTOCOLO V24** is a BNB Smart Chain protocol focused on:
 
-O backend faz proxy para esses upstreams e normaliza o retorno em:
-- CLEAR
-- BLOCKED
-- UNAVAILABLE
+- treasury protection
+- controlled token issuance
+- reserve-based structure
+- timed claim logic
+- compliance-ready architecture
 
-## Exemplo de payload recebido
-{
-  "address": "0xF7f2ED318CAF3Cf8793b07DFa7FdFD607Af4232d",
-  "chainId": 56,
-  "source": "website",
-  "action": "connect"
-}
+## Official Network
+
+- **Blockchain:** BNB Smart Chain
+- **Chain ID:** 56
+
+## Official Contracts
+
+- **Official Token V24:** `0x4C42587b1DA6a121CBa48053C19A534B6C091198`
+- **Official Protocol V24:** `0xe7603361925c5483C22A02D5B3DeADD0ab467f5A`
+
+## Local Usage
+
+1. Enter the `pou-compliance-backend` folder
+2. Copy `.env.example` to `.env`
+3. Run:
+
+```bash
+npm install
+npm start
