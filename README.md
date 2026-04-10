@@ -1,42 +1,25 @@
-# pou-compliance-backend
+# POU Compliance Backend
 
-Backend service for **POU PROTOCOLO V24** designed to expose compliance-related routes and support **Chainalysis Oracle** integration in a structured and auditable way.
+Backend service for compliance-related operational checks used in the POU PROTOCOLO ecosystem.
 
-## Overview
+## Status
+Current public implementation is focused on Chainalysis-related integration paths and operational backend structure.
 
-This backend currently exposes the following routes:
+## Purpose
+This repository is a backend support component and does not represent the token contract repository or the official protocol contract repository.
 
+## Official Links
+- Website: https://poureservavalor.com
+- Main repository: https://github.com/POUProtocolo/pou-protocolo
+- X: https://x.com/PouProtocolo
+- Contact: support@poureservavalor.com
+
+## Available Routes
 - `POST /api/compliance/chainalysis`
 - `GET /health`
 
-Its purpose is to provide a standardized compliance interface for **POU PROTOCOLO V24**, using **Chainalysis Oracle** as the current screening reference.
+## Notes
+Elliptic and TRM references should only be treated as planned or future integrations unless explicitly activated and documented.
 
-## Official Context
-
-**POU PROTOCOLO V24** is a BNB Smart Chain protocol focused on:
-
-- treasury protection
-- controlled token issuance
-- reserve-based structure
-- timed claim logic
-- compliance-ready architecture
-
-## Official Network
-
-- **Blockchain:** BNB Smart Chain
-- **Chain ID:** 56
-
-## Official Contracts
-
-- **Official Token V24:** `0x4C42587b1DA6a121CBa48053C19A534B6C091198`
-- **Official Protocol V24:** `0xe7603361925c5483C22A02D5B3DeADD0ab467f5A`
-
-## Local Usage
-
-1. Enter the `pou-compliance-backend` folder
-2. Copy `.env.example` to `.env`
-3. Run:
-
-```bash
-npm install
-npm start
+## Public Clarification
+This repository is an auxiliary backend service. Official token, protocol, and governance addresses must be obtained from the official project website and official contracts documentation.
